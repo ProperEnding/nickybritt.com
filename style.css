@@ -1,23 +1,685 @@
 html,body{
-	height:100%
+	height:100%;
 }
 
-body{
-	background:#000 url(http://staging.nickybritt.com/birdbackground.gif) no-repeat center center;background-size:cover;color:#fff;font:15px 'Helvetica Neue', Helvetica, Arial, sans-serif;margin:0
+@font-face {
+ font-family: 'Sanchez';
+  src: url(fonts/Sanchezregular.otf);
+}
+@font-face {
+ font-family: 'Montserrat-Light';
+  src: url(fonts/Montserrat-Light.otf);
+}
+@font-face {
+ font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Regular.otf);
+}
+@font-face {
+ font-family: 'Montserrat-Hairline';
+  src: url(fonts/Montserrat-Hairline.otf);
+}
+@font-face {
+ font-family: 'Montserrat-Black';
+  src: url(fonts/Montserrat-Black.otf);
+}
+@font-face {
+ font-family: 'Montserrat-Bold';
+  src: url(fonts/Montserrat-Bold.otf);
 }
 
-a,p{
-	position:absolute;left:0
-}
-
-a{
-	background:#203243 url(../images/logo-pill-b.svg);background-size:206px 45px;display:block;width:206px;height:45px;top:0;text-indent:100%;white-space:nowrap;overflow:hidden
+.scripts {
+	display: none;
 }
 
 p{
-	margin:0;padding:0 0 10px;top:43px;width:206px;background:#203243;box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default;font-size:.8em;font-weight:bold;letter-spacing:4px;text-align:center;text-transform:uppercase
+	font-size:1em;
+	text-decoration: none;
+	font-family: "Montserrat-Hairline","DIN Alternate", "DIN", "Abel", "Helvetica Neue";	
+	margin-bottom: 0px;
+	letter-spacing: .7px;
+
 }
 
-#navbar{
-	
+a{
+    text-decoration: none;
+}
+
+body{
+	background:#999;/* url(birdbackground.gif) no-repeat center center **/;
+	background-size:cover;
+	color:#fff;
+	margin:0;
+	background-attachment: fixed;
+}
+header {
+	overflow: hidden;
+	background: rgba(50, 50, 50, 0.9);
+	position: fixed;
+	width:100%;
+	top:0px;
+	left:0px;
+	height: 80px;
+	filter: blur(20px);
+	z-index: 1;
+/*	opacity: 0; */
+	transition: opacity 0.25s;
+	box-shadow: 0 0 10px #333;
+}
+header.loaded {
+	opacity: 1;
+}
+
+nav{ 
+	float:left;	
+	color: #ffffff;
+	font-family: "DIN Alternate", "DIN", "Abel", "Helvetica Neue";
+	width: 450px;
+	word-spacing: 37px;
+	z-index: 2;
+}
+
+nav a{
+	color: #ffffff;
+}
+
+h1{
+	text-decoration: none;
+	font-family: "DIN Alternate", "DIN", "Abel", "Helvetica Neue";	
+	text-transform:uppercase;
+	float:left;
+	font-size: 32px;
+	color: #f68b29;
+	margin:0;
+	margin-left: 37px;
+	margin-top: 20px;
+
+}
+
+h1 span { 
+	display: none;
+
+}
+
+h1 a{
+	color: #f68b29;
+}
+
+h2{
+	text-decoration: none;
+	font-family: "DIN Alternate", "DIN", "Abel", "Helvetica Neue";	
+	font-size: 16px;
+	color: #ffffff;
+	overflow: hidden;
+	padding-left: 37px;
+	margin-top: 5px,
+}
+
+h3{
+	text-decoration: none;
+	font-family: "Sanchez";
+	margin-bottom: 10px;
+	font-size: 40px;
+	color: #ffffff;
+	margin-top: 0px;
+
+}
+
+.top{
+	margin-top: 24px;
+	margin-left: 37px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.sub{
+	font-size: 16px;
+	margin-left: 262px;
+	margin-top: 0px;
+	margin-bottom:5px;
+	clear:both;
+	letter-spacing: 2px;
+}
+
+#aspyr {
+	overflow: hidden;
+	margin-top: 85px;
+	width:1150px;
+	padding-bottom: 37px;
+}
+
+#aspyr img{
+	overflow: hidden;
+	margin-top: 15px;
+	margin-left: 37px;
+	display: block;
+	float: left;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#highMotor {
+	overflow: hidden;
+	width:1150px;
+	padding-bottom: 37px;
+}
+
+#highMotor img{
+	overflow: hidden;
+	margin-top: 15px;
+	margin-left: 37px;
+	display: block;
+	float: left;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);}
+
+#unitedInterests{
+	overflow: hidden;
+	width:1150px;
+	padding-bottom: 37px;
+}
+
+#unitedInterests img{
+	overflow: hidden;
+	margin-top: 15px;
+	margin-left: 37px;
+	display: block;
+	float: left;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#silverstone {
+	overflow: hidden;
+	width:1150px;
+	padding-bottom: 37px;
+}
+
+#silverstone img{
+	overflow: hidden;
+	margin-top: 15px;
+	margin-left: 37px;
+	display: block;
+	float: left;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#wip{
+	overflow: hidden;
+	margin-top: 80px;
+}
+
+#bio{
+	overflow: hidden;
+	margin-top: 80px;
+}
+
+.column{
+	text-decoration: none;
+	font-family: "DIN Alternate", "DIN", "Abel", "Helvetica Neue";	
+	font-size: 16px;
+	float:left;
+	color: #ffffff;
+	width:400px;
+	margin-top: 15px;
+	margin-left: 37px;
+	line-height: 25px;
+	text-align: justify;
+}
+
+.current{
+
+	font-weight: bold;
+}
+
+.vert-gallery{
+	width: 100%;
+	height: 100%;
+}
+
+.vert-gallery a{
+	float: left;	
+	display: block;
+	overflow: hidden;
+	text-indent: 100%;
+	height: 100%;
+	width: 12.5%;
+	white-space: nowrap;
+	text-align: justify;
+	position: relative;
+	background-size: cover;
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.vert-gallery a:after{
+	content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-color: #000;
+	opacity: 0.5;
+    transition: opacity 0.5s;
+}
+.vert-gallery a:hover{
+	-webkit-filter: grayscale(0%);
+    filter: grayscale(0%)
+}
+
+.vert-gallery a:hover:after{
+	opacity: 0;
+}
+
+
+.vert-gallery-wide{
+	width: 100%;
+	height: 100%;
+
+}
+
+.vert-gallery-wide a{
+	float: left;	
+	display: inline-block;
+	overflow: hidden;
+	text-indent: 100%;
+	height: 100%;
+	width: 50%;
+	white-space: nowrap;
+	text-align: justify;
+	position: relative;
+	background-size: cover;
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.vert-gallery-wide a:after{
+	content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-color: #000;
+	opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.vert-gallery-wide a:hover{
+	-webkit-filter: grayscale(0%);
+    filter: grayscale(0%)
+}
+
+.vert-gallery-wide a:hover:after{
+	opacity: 0;
+}
+
+
+.bioshock{
+	background-image: url('images/bioshockColor100x500.jpg');
+}
+
+.civilization-v{
+	background-image: url('images/civilizationColor100x500.jpg');
+}
+
+.kotor{
+	background-image: url('images/kotorColor100x500.jpg');
+}
+
+.monkey-island{
+	background-image: url('images/monkeyColor100x500.jpg');
+}
+
+.cod{
+	background-image: url('images/codColor100x500.jpg');
+}
+
+.farenheit{
+	background-image: url('images/farenheitColor100x500.jpg');
+}
+
+.sim-city{
+	background-image: url('images/sim-cityColor100x500.jpg');
+}
+
+.borderlands2{
+	background-image: url('images/borderlandsColor100x500.jpg');
+}
+
+.theseunitedstates{
+	background-image: url('images/tusColor100x500.jpg');
+}
+
+.little-wind{
+	background-image: url('images/littleWindColor100x500.jpg');
+}
+.elephant-king{
+	background-image: url('images/elephantKingColor100x500.jpg');
+}
+
+.what-lasts{
+	background-image: url('images/whatLastsColor100x500.jpg');
+}
+
+.lion{
+	background-image: url('images/lionColor100x500.jpg');
+}
+.ete{
+	background-image: url('images/eteColor100x500.jpg');
+}
+
+.bill-burr{
+	background-image: url('images/billBurrColor100x500.jpg');
+}
+
+.missile-bell{
+	background-image: url('images/mbColor100x500.jpg');
+}
+
+.park-east1{
+	background-image: url('images/vertical-ColorPET400x500.jpg');
+}
+
+.blu1{
+	background-image: url('images/vertical-ColorBlu400x500.jpg');
+}
+
+
+#interestContent{
+	width: 1000px;
+	height: 100%;
+	margin: 80px auto 0;
+
+
+
+}
+.blog-entry{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	background-size: cover;
+}
+
+p.blog-text{
+ 	font-family: "Montserrat", "DIN Alternate", "DIN", "Abel", "Helvetica Neue";	
+}
+
+.blog-text{
+	margin-left: 40px;
+ 	width: 550px;
+ 	height: 200px;
+
+ }
+
+.opacity-blog{
+	opacity:.75;
+	background-color: #000;
+	width: 600px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.horizontal-aspyr-media{
+	background-image: url('images/horizontal-AspyrMedia.jpg');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 200px;
+}
+
+.horizontal-high-motor{
+	background-image: url('images/horizontal-HighMotor.jpg');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 200px;
+}
+
+.horizontal-ui{
+	background-image: url('images/horizontal-UI.jpg');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 200px;
+}
+
+.horizontal-silverstone{
+	background-image: url('images/horizontal-Silverstone.jpg');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 200px;
+}
+
+.secret-of-mana{
+	background-image: url('images/horizontal-SecretOfMana.jpg');
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 200px;
+}
+
+.shadow-of-the-colossus{
+	background-image: url('images/horizontal-ShadowOfTheColossusv2.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+
+}
+.marvel-vs-capcom-2{
+	background-image: url('images/horizontal-MarvelVsCapcom2.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.league-of-legends{
+	background-image: url('images/horizontal-LeagueOfLegends.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+.metal-slug{
+	background-image: url('images/horizontal-MetalSlug.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+.ff3{
+	background-image: url('images/horizontal-ff3.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.hearthstone{
+	background-image: url('images/horizontal-Hearthstone.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.f-zero{
+	background-image: url('images/horizontal-FZero.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+.streets-of-rage{
+	background-image: url('images/horizontal-StreetsOfRage.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.crimson-skies{
+	background-image: url('images/horizontal-CrimsonSkies.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.threes{
+	background-image: url('images/horizontal-threes.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.sc2{
+	background-image: url('images/horizontal-sc2.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.pilotwings{
+	background-image: url('images/horizontal-Pilotwings.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.oh-brother{
+	background-image: url('images/horizontal-OhBrother.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.king-kong{
+	background-image: url('images/horizontal-KingKong.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.in-bruges{
+	background-image: url('images/horizontal-InBruges.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.nxnw{
+	background-image: url('images/horizontal-NXNW.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.kiss-kiss-bang-bang{
+	background-image: url('images/horizontal-KissKissBangBang.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.the-big-lebowski{
+	background-image: url('images/horizontal-lebowski.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.starship-troopers{
+	background-image: url('images/horizontal-Starship.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.tangled{
+	background-image: url('images/horizontal-Tangled.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.no-country{
+	background-image: url('images/horizontal-NoCountry.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.indy{
+	background-image: url('images/horizontal-Indy.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.masculine-femanine{
+	background-image: url('images/horizontal-MasculineFemanine.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.up{
+	background-image: url('images/horizontal-up.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.lotr{
+	background-image: url('images/horizontal-lotr.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.beach-boys{
+	background-image: url('images/horizontal-BeachBoys.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.active-child{
+	background-image: url('images/horizontal-ActiveChild.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.frederic-chopin{
+	background-image: url('images/horizontal-Chopin.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.kendrick-lamar{
+	background-image: url('images/horizontal-kendrick.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.igor-stravinsky{
+	background-image: url('images/horizontal-Stravinsky.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.twin-shadow{
+	background-image: url('images/horizontal-TwinShadow.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.new-edition{
+	background-image: url('images/horizontal-newEdition.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.m83{
+	background-image: url('images/horizontal-M83.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.radiohead{
+	background-image: url('images/horizontal-radiohead.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+
+.tchaikovsky{
+	background-image: url('images/horizontal-Tchaikovsky.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.moondog{
+	background-image: url('images/horizontal-moondog.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.mississippi-john-hurt{
+	background-image: url('images/horizontal-mississippiJohnHurt.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.miles-davis{
+	background-image: url('images/horizontal-milesDavis.jpg');
+	background-repeat: no-repeat;
+	height: 200px;
 }
