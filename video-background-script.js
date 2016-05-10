@@ -76,7 +76,9 @@
         }
 
         return randomizedVideos;
+        ;
+
     }
     console.log(randomizeVideos(videos));
-
+    $('body').css({'background': videos});
 })();
