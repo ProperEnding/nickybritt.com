@@ -4,7 +4,8 @@
         This is the code that handles our background video rotation, etc.
     */
 
-
+    var state = {
+    };
     var videos = [
         {
             name: 'Kau on a swing',
@@ -12,7 +13,7 @@
         },
         {
             name: 'Joe cannonball',
-            url: '/videos/joe-cannon-ball.mp4'
+            url: '/videos/joe-cannonball.mp4'
         },
         {
             name: 'Mikey opens a beer',
@@ -52,13 +53,14 @@
         },
         {
             name: 'Dragon X-ing at Sherwood',
-            url: '/videos/dragon-xign.mp4'
+            url: '/videos/dragon-xing.mp4'
         },
         {
             name: 'Kau bocce toss',
             url: '/videos/bocce-toss.mp4'
         }
     ];
+
     function randomizeVideos(videos) {
         var randomizedVideos = [],
             randomVideo,
@@ -76,9 +78,65 @@
         }
 
         return randomizedVideos;
-        ;
-
     }
-    console.log(randomizeVideos(videos));
-    $('body').css({'background': videos});
+
+
+/*
+notes:
+
+var myPlayer = document.getElementById('video-background');
+var activeVideo = document.getElementById('active-video');
+
+activeVideo.src = myvideos[index].url;
+myPlayer.load();
+myPlayer.play();
+
+myPlayer.removeEventListener('ended', listener?listener:0);
+
+
+Assignment:
+
+Create a function called initialize background videos.
+
+Function should call randomizeVideos to get a list of random videos,
+it should also take first video in new stack & set url/play first video
+in video element on homepage.
+
+Don't worry about auto advance for now.
+
+Call initialize task.
+
+
+*/
+
+    function initializeBackgroundVideos(videos) {
+        state.currentlyPlayingVideoIndex = 0
+        state.numberOfVideos = videos.length;
+        state.randomizedVideos = randomizeVideos(videos);
+        state.myPlayer = document.getElementById('video-background');
+        state.activeVideo = document.getElementById('active-video');
+
+        loadVideo();
+
+        state.myPlayer.addEventListener('ended', nextVideo);
+    }
+
+    initializeBackgroundVideos(videos);
+
+    function loadVideo() {
+        var url = state.randomizedVideos[state.currentlyPlayingVideoIndex].url;
+        state.activeVideo.src = url;
+        state.myPlayer.load();
+        state.myPlayer.play();
+    }
+
+    function nextVideo() {
+        state.currentlyPlayingVideoIndex  += 1;
+
+        if (state.currentlyPlayingVideoIndex >= state.numberOfVideos) {
+            state.currentlyPlayingVideoIndex = 0;
+        }
+
+        loadVideo();
+    }
 })();
